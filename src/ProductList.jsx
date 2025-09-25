@@ -5,12 +5,12 @@ function ProductList({ onHomeClick }) {
     const [showCart, setShowCart] = useState(false);
     const [showPlants, setShowPlants] = useState(false); // State to control the visibility of the About Us page
      const [addedToCart, setAddedToCart] = useState({});
-     const handleAddToCart = (product) => {
-    dispatch(addItem(product)); // Dispatch the action to add product to Redux store
+     const handleAddToCart = (plant) => {
+    dispatch(addItem(plant)); // Dispatch the action to add product to Redux store
 
     setAddedToCart((prevState) => ({
       ...prevState,
-      [product.name]: true, // Mark this product as added to cart
+      [plant.name]: true, // Mark this product as added to cart
     }));};
     const plantsArray = [
         {
